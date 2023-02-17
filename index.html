@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Password Generator</title>
+	<link rel='stylesheet' href='./style.css'>
+</head>
+<body>
+    <div id="container">
+        <h1>Password Generator</h1>
+        <div id="symbols">
+            <label><input type="checkbox" value="1" checked>Numbers</label>
+            <label><input type="checkbox" value="2" checked>Letters (a-z, A-Z)</label>
+            <label><input type="checkbox" value="3" checked>Special Characters</label>
+        </div>
+        <label>Password Length: </label>
+        <input type="number" id="length" value="8" min="1" max="20">
+        <input type="button" value="Generate Password" onclick="generatePassword()">
+        <input type="button" value="Copy" id="copy-password" onclick="copypass()">
+        <input type="text" id="password" value="" readonly>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="./script.js" defer></script>
+</body>
+</html>
